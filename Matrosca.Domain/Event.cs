@@ -20,8 +20,7 @@ namespace Matrosca.Domain
         public string Telephone { get; set; }
 
         public string Email { get; set; }
-        public string Lote { get; set; }
-
+        
         public List<Lote> Lotes { get; set; }
         public List<SocialMedia> SocialMedias { get; set; }
         public List<SpeakerHasEvent> SpeakeEvents { get; set; }

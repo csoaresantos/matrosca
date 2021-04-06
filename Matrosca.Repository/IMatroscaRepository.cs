@@ -13,10 +13,10 @@ namespace Matrosca.Repository
 
         Task<Event[]> GetAllEventAsyncByTheme(string theme, bool includeSpeakers);
         Task<Event[]> GetAllEventAsync(bool includeSpeakers);
-        Task<Event> GetEventAsyncById(int EventId, bool includeSpeakers);
+        Task<Event> GetEventAsyncById(int eventId, bool includeSpeakers);
 
-        Task<Event[]> GetAllSpeakerAsyncByName(bool includeSpeakers);
-        Task<Event> GetSpeakerAsync(int SpeakerId, bool includeSpeakers);
+        Task<Speaker[]> GetAllSpeakerAsyncByName(string name, bool includeEvents);
+        Task<Speaker> GetSpeakerAsync(int speakerId, bool includeEvents);
 
     }
 }
