@@ -13,6 +13,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
 using Matrosca.Repository;
+using AutoMapper;
 
 namespace Matrosca.API
 {
@@ -29,6 +30,8 @@ namespace Matrosca.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<MatroscaContext>(x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddScoped<IMatroscaRepository, MatroscaRepository>();
+            services.AddAutoMapper();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

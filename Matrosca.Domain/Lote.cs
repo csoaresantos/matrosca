@@ -11,7 +11,7 @@ namespace Matrosca.Domain
         public DateTime? EndDate { get; set; }
         public int Quantity { get; set; }
         public int EventId { get; set; }
-        public Event Event { get; set; }
+        public Event Event { get; }
 
     }
 }
